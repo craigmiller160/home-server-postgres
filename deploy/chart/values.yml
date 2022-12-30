@@ -1,0 +1,14 @@
+certificate:
+  issuer: postgres-selfsigned-issuer
+  name: postgres-certificate
+deployment:
+  name: postgres
+  image: postgres:14.5
+  secretNames:
+    rootAccount: postgres-root-account
+  volumeNames:
+    certsSecretVolume: postgres-certs-secret-volume
+    certsVolume: postgres-certs-volume
+    dataVolume: postgres-data-volume
+pvc:
+  name: postgres-pvc
