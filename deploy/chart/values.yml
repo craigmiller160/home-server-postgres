@@ -5,7 +5,7 @@ deployment:
   name: postgres
   image: postgres:14.5
   secretNames:
-    rootAccount: postgres-root-account
+    rootAccount: postgres-account
   volumeNames:
     certsSecretVolume: postgres-certs-secret-volume
     certsVolume: postgres-certs-volume
