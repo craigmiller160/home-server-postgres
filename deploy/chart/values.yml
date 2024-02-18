@@ -12,3 +12,4 @@ deployment:
     dataVolume: postgres-data-volume
 pvc:
   name: postgres-pvc
+lan_host: craigpc

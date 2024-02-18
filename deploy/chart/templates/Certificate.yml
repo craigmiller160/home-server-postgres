@@ -13,6 +13,18 @@ spec:
   isCA: true
   commonName: {{ .Values.certificate.name }}
   secretName: {{ .Values.certificate.name }}
+  subject:
+    organizations:
+      - "Craig Miller"
+    organizationalUnits:
+      - Postgres
+    countries:
+      - US
+    states:
+      - FL
+  dnsNames:
+    - {{ .Values.deployment.name }}
+    - {{ .Values.lan_host }}
   privateKey:
     algorithm: ECDSA
     size: 256
